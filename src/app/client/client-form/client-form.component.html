@@ -1,0 +1,35 @@
+
+  <h1 mat-dialog-title> Agregar nueva Noticia</h1>
+  <mat-divider></mat-divider>
+  <div mat-dialog-content>
+  <form class="example-form" [formGroup]="clientForm">
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input formControlName="fname" matInput placeholder="Nombre"/>
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Apellido</mat-label>
+        <input formControlName="lname" matInput placeholder="Apellido"/>
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Cedula</mat-label>
+        <input formControlName="cedula" matInput placeholder="Cedula"/>
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Telefono</mat-label>
+        <input formControlName="cellphoneNumber" matInput placeholder="Telefono"/>
+      </mat-form-field></td>
+    </tr></table>
+  </form>
+  </div>
+  <div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Cerrar</button>
+    <button  style="margin-left: 8px;"mat-raised-button color="primary" (click)="addClient()" >{{actionBtn}}</button>
+  </div>
+  <script src="sweetalert2.all.min.js"></script>
+  <script src="sweetalert2.min.js"></script>
+  
+     
+    
+  

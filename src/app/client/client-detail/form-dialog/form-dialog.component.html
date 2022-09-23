@@ -1,0 +1,32 @@
+
+
+  <h1 mat-dialog-title> Agregar nueva Direccion</h1>
+  <mat-divider></mat-divider>
+  <div mat-dialog-content>
+  <form class="example-form" [formGroup]="directionForm">
+    <table class="example-full-width" cellspacing="0">
+        <tr>
+            <td>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Cuerpo</mat-label>
+                    <textarea formControlName="direction" matInput placeholder="Direccion"></textarea>
+                  </mat-form-field>
+            </td>
+        </tr>
+    </table>
+    <p>
+     
+    </p>
+  </form> 
+  </div>
+  <div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Cerrar</button>
+    <button  *ngIf="!isEditing" style="margin-left: 8px;"mat-raised-button color="primary" (click)="addDirection()" >{{actionBtn}}</button> 
+    <button  *ngIf="isEditing" style="margin-left: 8px;"mat-raised-button color="primary" (click)="updateDirection()" >{{actionBtn}}</button> 
+  </div>
+  <script src="sweetalert2.all.min.js"></script>
+  <script src="sweetalert2.min.js"></script>
+  
+     
+    
+  
